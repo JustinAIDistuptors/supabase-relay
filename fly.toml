@@ -1,0 +1,22 @@
+app = "supabase-relay"
+primary_region = "iad"
+
+[env]
+LOG_LEVEL = "debug"
+PORT = "8080"
+SERVICE_NAME = "supabase"
+SUPABASE_PATH = "/sss"
+UPSTREAM_URL = "https://supabase-mcp-snowy-snow-3355.fly.dev"
+
+[http_service]
+auto_start_machines = true
+auto_stop_machines = false
+force_https = true
+internal_port = 8_080
+min_machines_running = 1
+processes = [ "app" ]
+
+[vm]
+cpu_kind = "shared"
+cpus = 1
+memory = "256mb"
